@@ -1,110 +1,224 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-:root {
-  font-size: 62.5%;
-
-  --main-text-color: hsl(240, 27%, 28%);
-  --text-color: hsl(240, 27%, 28%, 0.8);
-  --input-bg-color: hsl(212, 23%, 89%);
-  --button-bg-color: hsl(262, 52%, 47%);
-  --button-bg-color-hover: hsl(262, 52%, 59%);
-  --bg-color-main: hsl(0, 0%, 100%);
-  --bg-color: linear-gradient(287.56deg, hsl(199, 88%, 87%) 0%, hsl(217, 96%, 81%) 100%);
-
-  --font-regular: 400;
-  --font-semi-bold: 600;
-  --font-bold: 700;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  font-size: 1.6rem;
+html {
+  height: 100%;
+  width: 100%;
 }
 
 body {
-  background: var(--bg-color);
-  display: grid;
-  place-items: center;
-  height: calc(100vh - 1.2rem);
+
+  background-image: linear-gradient(to right, #190361, #35027C, #46028C, #6402AA, #8401C9, #9001D5, #A300E7, #BB00FF);
 }
 
-body,
-p,
-input,
-button {
-  font-family: 'DM Sans', sans-serif;
+.page {
+  margin: 80px auto 91px;
+  width: 428px;
+  height: 424px;
+
 }
 
-main {
-  padding: 4.8rem 6.4rem 6.4rem;
-  border-radius: 0.6rem;
-  background-color: var(--bg-color-main);
-  width: min(90%, 42.8rem);
-  filter: drop-shadow(hsl(0, 0%, 0%, 10%) 0 0.2rem 0.4rem);
+.game-wrapper {
+  background-color: #fafafc;
+  border-radius: 5px;
+  margin-top: 42px;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  position: relative;
+  top: -60px;
+
+  filter: drop-shadow(hsla(0, 0%, 0%, 0.8) 0 20px 50px);
 }
 
-.screen1 {
+.sorte-wrapper {
+  background-color: #e4edf1;
+
+  font-family: 'Dancing Script', 'Times New Roman', sans-serif;
   text-align: center;
+  position: relative;
+  top: -30px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  padding: 10px;
+  color: #34355b;
+}
+
+
+
+.biscuit {
+  width: 300px;
+  height: 200px;
 }
 
 h1 {
-  font-weight: var(--font-semi-bold);
-  font-size: 2.4rem;
-  color: var(--main-text-color);
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 1.6rem;
+  font-family: 'Montserrat', 'Times New Roman', Sans Serif;
+  text-align: center;
+  position: relative;
+  top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  color: #34355b;
 }
 
 p {
-  color: var(--text-color);
-  font-weight: var(--font-regular);
-  margin-bottom: 4.8rem;
+  font-family: 'DM Sans', 'Times New Roman', Sans Serif;
+  text-align: center;
+  position: relative;
+  top: -30px;
+  font-size: 16px;
+  color: #34355b;
+ 
+    -webkit-animation: scale-up-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
 }
 
-form {
+label {
+  font-size: 12px;
+  line-height: 20px;
+
+  margin-left: 12px;
+}
+
+button {
+  font-size: 16px;
+  line-height: 26px;
+  padding: 2px;
+  width: 15%;
+  border: none;
+
+  background-color: #c1bccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.submit {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 0px;
+  justify-content: center;
+  margin-top: -20px;
+
+}
+.submit :hover{
+  cursor: pointer;
+  animation-name: shake;
+  animation-duration: 1s;
+  
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-top: 100px;
+}
+
+.game-wrapper2 {
+  background-color: #fafafc;
+  border-radius: 5px;
+  margin-top: 42px;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  position: relative;
+  top: -90px;
+
+  filter: drop-shadow(hsla(0, 0%, 0%, 0.8) 0 20px 50px);
+}
+
+.open-biscuit {
+  font-family: 'DM Sans', 'Times New Roman', sans-serif;
+  background-color: #ff9500;
+  color: #fff;
+  width: 100%;
+  height: 170%;
+  padding: 10px 15px;
+  border: none;
   display: flex;
   justify-content: center;
-}
-
-input {
-  background-color: var(--input-bg-color);
-  width: 6.5rem;
-  border-radius: 0.4rem 0 0 0.4rem;
-}
-
-button {
-  background-color: var(--button-bg-color);
-  color: var(--bg-color-main);
+  border-radius: 5px 5px 5px 5px;
   cursor: pointer;
-  border-radius: 0 0.4rem 0.4rem 0;
-  &:hover {
-    background-color: var(--button-bg-color-hover);
-  }
-
-  &.play-again-button {
-    border-radius: 0.4rem;
-  }
+ 
 }
 
-input,
-button {
+.botaoBiscoito button {
+  font-family: 'DM Sans', 'Times New Roman', sans-serif;
+  background-color: #ff9500;
+  color: #fff;
+  width: 100%;
+  height: 170%;
+  padding: 10px 15px;
   border: none;
-  padding: 1.6rem;
-  font-weight: var(--font-bold);
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.screen2 {
+.botaoBiscoito button :hover {
+  font-family: 'DM Sans', 'Times New Roman', sans-serif;
+  background-color: #ff9000;
+  color: #fff;
+  width: 100%;
+  height: 170%;
+  padding: 10px 15px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+
+}
+
+.sorte-wrapper h2 {
+
+  font-family: 'Dancing Script', 'Times New Roman', sans-serif;
   text-align: center;
+  position: relative;
+  top: -30px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  padding: 10px;
+  color: #34355b;
+  animation-name: surge ;
+  animation-duration:  2s;
 }
 
-.screen2 p {
-  font-size: 2.4rem;
-  font-weight: var(--font-regular);
+.mensagemSorte h2 {
+
+  font-family: 'Dancing Script', 'Times New Roman', sans-serif;
+  text-align: center;
+  position: relative;
+  top: -30px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  padding: 10px;
+  color: #34355b;
+ 
 }
 
 .hide {
-    display: none;
+  display: none;
+}
+@keyframes surge{
+  from{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+}
+@keyframes shake{
+  0% {margin-left: 0;rotate:5deg}
+  25% {margin-left: 5px;rotate:-5deg}
+  50% {margin-left: 0;rotate:5deg}
+  75% {margin-left: -5px;rotate:-5deg}
+  100% {margin-left: 0;rotate:5deg}
+
 }
