@@ -83,6 +83,12 @@ button{
   justify-content: center;
   margin-top: -20px;
 }
+.submit :hover{
+  cursor: pointer;
+  animation-name: shake;
+  animation-duration: 1s;
+  
+}
 fieldset{
   border:none;
   display: flex;
@@ -152,6 +158,8 @@ fieldset{
     font-size: 24px;
     padding:10px;
     color:#34355b;
+  animation-name: surge ;
+  animation-duration:  2s;
 
 }.mensagemSorte h2{
 
@@ -167,4 +175,23 @@ fieldset{
 }
 .hide{
   display: none;
+}
+@keyframes surge{
+  from{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+}
+@keyframes shake{
+  0% {margin-left: 0;rotate:5deg}
+  25% {margin-left: 5px;rotate:-5deg}
+  50% {margin-left: 0;rotate:5deg}
+  75% {margin-left: -5px;rotate:-5deg}
+  100% {margin-left: 0;rotate:5deg}
+
 }
